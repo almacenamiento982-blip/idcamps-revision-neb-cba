@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><title>Revisión Nebraska y Córdoba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f2f0;--panel:#fff;--ink:#16161a;--ink2:#4a4a52;--muted:#7c7c85;--line:#e1dfda;--oro:#a8842f;--ok:#1d7a4a;--ok-s:#e3f3ea;--warn:#9a6a00;--warn-s:#fbf1d9;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111113;--panel:#1b1b1f;--ink:#f2f1ee;--ink2:#c6c5c0;--muted:#8d8c88;--line:#2e2e33;--oro:#d2ad55;--ok:#5cc98c;--ok-s:#14301f;--warn:#e7b84a;--warn-s:#352a10;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111113;--panel:#1b1b1f;--ink:#f2f1ee;--ink2:#c6c5c0;--muted:#8d8c88;--line:#2e2e33;--oro:#d2ad55;--ok:#5cc98c;--ok-s:#14301f;--warn:#e7b84a;--warn-s:#352a10;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Barlow",system-ui,"Segoe UI",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:18px;padding-block:26px 60px}
+h1,h2,h3{font-family:"Barlow Condensed","Barlow",system-ui,sans-serif;margin:0;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,46px);text-transform:uppercase}h2{font-size:34px;text-transform:uppercase}h3{font-size:20px;letter-spacing:.4px}
+.eyebrow{font:600 13px/1 "Barlow",sans-serif;letter-spacing:2.5px;text-transform:uppercase;color:var(--oro);margin-bottom:10px}
+.lead{color:var(--ink2);font-size:18px;margin:10px 0 0;max-width:70ch}
+.resumen{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:20px}
+.resumen div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.resumen b{display:block;font:700 15px "Barlow Condensed",sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:8px;padding-block:12px;margin-top:22px;border-bottom:1px solid var(--line)}
+.tabs button{font:700 18px "Barlow Condensed",sans-serif;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--line);background:var(--panel);color:var(--ink2);padding:9px 20px;border-radius:8px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ficha{margin:22px 0 6px}.ficha p{margin:4px 0 0;color:var(--ink2)}.ficha .plan{color:var(--muted);font-size:15px}
+.ad{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-top:16px;overflow:hidden}
+.ad header{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.num{font:700 16px "Barlow Condensed",sans-serif;background:var(--ink);color:var(--bg);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex:none}
+.estado{margin-left:auto;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--ok-s);color:var(--ok);white-space:nowrap}
+.ad.pend .estado{background:var(--warn-s);color:var(--warn)}
+.cuerpo{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:20px;padding:16px}
+.media{min-width:0}.media img{display:block;width:100%;height:auto;border-radius:8px}
+.media img.v{max-width:240px}
+.falta{margin-top:8px;font-size:14px;color:var(--warn)}
+.carr{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.carr img{width:78%;flex:none;scroll-snap-align:start}
+.copy{min-width:0}.lbl{font:600 12px "Barlow",sans-serif;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.lbl:first-child{margin-top:0}.copy p{margin:4px 0 0}.tp{font-size:15.5px}.tit{font-weight:600}
+.btn{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:3px 12px;font-weight:600;font-size:14px}
+@media (max-width:720px){.cuerpo{grid-template-columns:1fr}.media img{max-width:420px}}
+footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+
+.hint{text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted)}
+.nota[hidden]{display:none}
+.ph{aspect-ratio:9/16;max-width:220px;border-radius:10px;background:#111;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;text-align:center;padding:16px}
+.ph b{font:700 22px "Barlow Condensed",sans-serif;letter-spacing:1px;text-transform:uppercase}.ph span{font-size:14px;color:#c9a34e}
+.ed{border:1px dashed var(--line);border-radius:8px;padding:8px 10px;margin-top:4px;outline:none;white-space:pre-wrap}
+.ed:focus{border-color:var(--oro);border-style:solid}
+.ed.cambiado{border-color:var(--warn);border-style:solid}
+.acciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.acciones button,.nota button,.todo button{font:600 15px "Barlow",sans-serif;border-radius:8px;padding:9px 16px;cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+.acciones .aprobar{background:var(--ok);border-color:var(--ok);color:#fff}
+.acciones .aprobar.copy{background:var(--warn);border-color:var(--warn)}
+.nota{margin-top:10px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.nota textarea{font:15px "Barlow",sans-serif;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);width:100%}
+.aviso{margin:8px 0 0;font-size:14px;color:var(--ok);min-height:1em}
+.ad.aprobado{border-color:var(--ok);box-shadow:0 0 0 1px var(--ok)}
+.ad.aprobado .estado{background:var(--ok-s);color:var(--ok)}
+.segm{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--oro);border-radius:10px;padding:14px 16px;margin:14px 0 4px}
+.segm-t{display:block;font:700 13px "Barlow Condensed",sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.segm dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0}
+.segm dt{font-weight:600;color:var(--ink)}.segm dd{margin:0;color:var(--ink2)}.segm a{color:var(--oro)}
+@media (max-width:560px){.segm dl{grid-template-columns:1fr}.segm dd{margin-bottom:6px}}
+.presu{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0 4px}
+.presu div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.presu b{font:700 13px "Barlow Condensed",sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.presu .big{font:700 28px/1.1 "Barlow Condensed",sans-serif;color:var(--ink)}
+.presu small{color:var(--muted);font-size:13.5px;line-height:1.4}.presu .hist{color:var(--ink2);font-size:14px}
+.todo{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:14px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.todo .cuenta{font-weight:600}.todo button{background:var(--ok);border-color:var(--ok);color:#fff}
+.como{margin-top:14px;font-size:15px;color:var(--ink2);max-width:80ch}
+
+.idi{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+.ad-video{background:var(--panel);border:1px dashed var(--line);border-radius:14px;margin-top:16px;overflow:hidden}
+.ad-video header{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.estado.pendv{background:var(--warn-s);color:var(--warn)}
+.ad-video .copy p{color:var(--ink2);margin:0}
+.ad-video .ph{max-width:150px}
+.ampliable{cursor:zoom-in}
+#visor{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
+#visor[hidden]{display:none!important}
+#visor img{max-width:100%;max-height:100%;width:auto;height:auto;border-radius:6px}
+#visor .cerrar{position:fixed;top:12px;right:16px;background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:999px;width:42px;height:42px;font-size:24px;cursor:pointer}
+.confirmar{background:var(--warn-s);color:var(--ink);border-left:4px solid var(--warn);border-radius:10px;padding:12px 16px;margin-top:16px}
+h3.sub{font-family:'Barlow Condensed',sans-serif;font-size:21px;letter-spacing:.5px;margin:26px 0 8px}
+.tw{overflow-x:auto}table.t{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+table.t th{background:#111;color:#fff;text-align:left;padding:8px;font-weight:600}table.t td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top}
+table.t .n{text-align:right;white-space:nowrap}table.t tr.tot td{font-weight:700;border-top:2px solid #C9A34E}
+.pie{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+</style></head><body><div class="wrap">
+<div class="eyebrow">Juventus ID Camps · Meta Ads · Para aprobar</div>
+<h1>Nebraska y Córdoba: campañas nuevas</h1>
+<p class="lead">Dos sedes nuevas de 2027 que arrancarían ahora para aprovechar el Black Friday (27–30 de noviembre): Nebraska (North Platte, 20–21 de febrero) y Córdoba (México, 26–28 de marzo). Cada una lleva 6 anuncios con lo que mejor ha funcionado en la temporada: Hero, Hero con jugadores del primer equipo, Coaches, video de Jesús, video "¿Qué nos hace diferentes?" y Un día en el ID Camp. Abajo, por sede: público, presupuesto por fases, lo que se puede esperar y cada anuncio con su texto.</p>
+<div class="resumen">
+  <div><b>Nebraska</b>USA · inglés · 50 millas · USD 1.042 en 88 días (del 25-nov al 20-feb).</div>
+  <div><b>Córdoba</b>México · español · 25–30 km · USD 1.518 en 122 días (del 25-nov al 26-mar).</div>
+  <div><b>Pendiente</b>Videos de Jesús (en camino) · fecha de Nebraska en la app · aprobación de anuncios y presupuesto.</div>
+</div>
+<p class="como"><b>Por qué estas piezas:</b> en la temporada, el Hero es el que más convierte de clic a registro; Coaches fue el mejor de Hawaii; el video de Jesús rinde en Bayamón, Mayagüez y Dallas; los heroes con jugadores del primer equipo arrancaron bien en Dallas; y el video "¿Qué nos hace diferentes?" está en prueba en Hawaii y Puerto Rico.</p>
+<p class="como"><b>Cómo aprobar:</b> si el texto está bien, botón <b>Aprobar</b>. Para corregir el texto o el título se escribe directamente sobre ellos; el botón pasa a <b>Aprobar con texto corregido</b>. También se puede dejar una nota sin aprobar.</p>
+<section id="neb" class="sede">
+  <div class="ficha"><h2>Nebraska · North Platte</h2><p>20–21 de febrero de 2027 · 9:00 AM – 1:00 PM · North Platte Recreation Center, 1300 McDonald Rd, North Platte, NE · USD 225</p><p class="plan">En inglés, como las demás sedes de Estados Unidos. Los anuncios llevan a la página de inscripción de Nebraska (falta crear la fecha en la app).</p></div>
+  <div class="confirmar"><b>Antes de encender:</b> la fecha de Nebraska todavía no existe en la app de inscripción, así que hoy no hay página a dónde mandar a las familias. Nebraska tampoco tiene base de correo ni SMS: el contacto local (banco y club de North Platte) puede pesar tanto como los anuncios.</div>
+  <div class="segm"><b class="segm-t">Cómo se configura en Meta</b>
+    <dl>
+      <dt>Ubicación</dt><dd>Radio de <b>50 millas</b> alrededor del North Platte Recreation Center (<a href="https://www.google.com/maps?q=41.1239,-100.7654" target="_blank" rel="noopener">ver el punto en el mapa</a>). Cubre North Platte y el condado de Lincoln, más Gothenburg, Cozad y Ogallala (en el borde). Si la frecuencia sube, se puede abrir a ~75 millas (Lexington, McCook, Broken Bow); Kearney queda a 92 millas.</dd>
+      <dt>A quién</dt><dd>Personas que viven en esa zona o que estuvieron allí hace poco. Padres de <b>30 a 55 años</b> como público sugerido (Meta puede ampliarlo si encuentra familias interesadas).</dd>
+      <dt>Dónde se ve</dt><dd>Solo Facebook e Instagram: feed, historias y reels (sin Audience Network).</dd>
+      <dt>Objetivo</dt><dd>Registros en la página de inscripción de la sede, medidos con el píxel.</dd>
+      <dt>Cuenta</dt><dd>Juventus Camps USA, en la campaña de ID Camps, como un conjunto más (NEB | NORTH PLATTE 50MI | 30-55 | END 20FEB).</dd>
+      <dt>Fechas</dt><dd>Desde el 25 de noviembre (para llegar al Black Friday con alcance) hasta el 20 de febrero, día en que empieza el camp. Estaba previsto arrancar el 21 de diciembre.</dd>
+    </dl>
+  </div>
+  <h3 class="sub">Tamaño del público</h3><div class="tw"><table class="t"><thead><tr><th>Radio desde la sede</th><th class="n">Población</th><th class="n">Niños 5–17</th><th class="n">Adultos 30–54</th></tr></thead><tbody><tr><td>25 mi</td><td class="n">33.802</td><td class="n">5.868</td><td class="n">10.229</td></tr><tr><td>50 mi</td><td class="n">59.567</td><td class="n">10.054</td><td class="n">17.192</td></tr><tr><td>75 mi</td><td class="n">105.802</td><td class="n">18.910</td><td class="n">30.878</td></tr><tr><td>100 mi</td><td class="n">194.845</td><td class="n">33.480</td><td class="n">55.784</td></tr></tbody></table></div><p class="pie">Fuente: Censo de EE. UU. (ACS 2020–2024). Meta no da una estimación de alcance por esta vía: el número exacto se ve en Ads Manager al armar el conjunto.</p>
+  <h3 class="sub">Presupuesto propuesto por fases</h3><div class="tw"><table class="t"><thead><tr><th>Fase</th><th class="n">Al día</th><th class="n">Gasto</th><th>Por qué</th></tr></thead><tbody><tr><td><b>Empuje Black Friday</b><br><small>25/11 – 30/11 · 6 días</small></td><td class="n"><b>USD 15</b></td><td class="n">USD 90</td><td><small>Arranque en frío + cupón JUVEBF USD 50 (27–30 nov). Sirve también para que el píxel y el público de retargeting empiecen a llenarse.</small></td></tr><tr><td><b>Diciembre bajo</b><br><small>01/12 – 01/01 · 32 días</small></td><td class="n"><b>USD 6</b></td><td class="n">USD 192</td><td><small>Mantener presencia sin gastar fuerte lejos del evento (fiestas; los ID Camps arrancaron ~58 días antes). No apagar del todo para no reiniciar el aprendizaje.</small></td></tr><tr><td><b>Normal</b><br><small>02/01 – 05/02 · 35 días</small></td><td class="n"><b>USD 14</b></td><td class="n">USD 490</td><td><small>Desde ~49 días antes del evento. Enero es el mes más caro de la cuenta USA (multiplicador 1,15).</small></td></tr><tr><td><b>Últimas 2 semanas</b><br><small>06/02 – 20/02 · 15 días</small></td><td class="n"><b>USD 18</b></td><td class="n">USD 270</td><td><small>Subida de ~29 % (14 → 18), dentro de la regla de escalones de 20–30 %; el cierre concentra pagos (92 % paga el mismo día o al siguiente de registrarse).</small></td></tr><tr class="tot"><td>Total</td><td></td><td class="n">USD 1.042</td><td><small>Unos USD 210 se gastan antes del 21 de diciembre, fecha en que estaba previsto arrancar.</small></td></tr></tbody></table></div>
+  <h3 class="sub">Lo que se puede esperar</h3><div class="tw"><table class="t"><thead><tr><th>Escenario</th><th class="n">Familias registradas</th><th class="n">Pagan</th><th class="n">Niños pagados</th><th class="n">Costo por niño</th><th class="n">Ingreso (precio de lista)</th><th class="n">Retorno</th></tr></thead><tbody><tr><td>Bajo</td><td class="n">≈ 53</td><td class="n">20 %</td><td class="n"><b>≈ 12</b></td><td class="n">≈ USD 90</td><td class="n">USD 2.597</td><td class="n">2,4x</td></tr><tr><td>Medio</td><td class="n">≈ 68</td><td class="n">28 %</td><td class="n"><b>≈ 20</b></td><td class="n">≈ USD 51</td><td class="n">USD 4.605</td><td class="n">4,3x</td></tr><tr><td>Alto</td><td class="n">≈ 92</td><td class="n">35 %</td><td class="n"><b>≈ 35</b></td><td class="n">≈ USD 30</td><td class="n">USD 7.824</td><td class="n">7,4x</td></tr></tbody></table></div>
+  <p class="pie">Cómo se calcula: costo base por niño de USD 80 / 50 / 30 (bajo/medio/alto); 20 % / 28 % / 35 % de familias registradas que pagan (familias de anuncio USA: 20 %; sedes chicas 27–45 %). Son referencias para decidir, no metas.</p>
+  <h3 class="sub">Los 6 anuncios</h3>
+  <article class="ad" data-id="NEB_1">
+  <header><span class="num">1</span><h3>HERO-POSTER (Imagen)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/NEB_1.jpg?v=1795020808" data-grande="assets/NEB_1_g.jpg?v=1795020808" class="ampliable" alt="HERO-POSTER (Imagen) · Nebraska · North Platte" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">For the first time, the Juventus ID Camp is coming to Nebraska! ⚪⚫<br><br>Two mornings of training with Juventus Academy coaches from Italy, with the same methodology Juventus uses to develop the players of its academy.<br><br>📅 February 20–21 · 9 AM – 1 PM<br>📍 North Platte Recreation Center, North Platte, NE<br>⚽ Boys and girls<br><br>Tap Sign Up to register your player 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Juventus ID Camp · Nebraska, Feb 20–21</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="NEB_2">
+  <header><span class="num">2</span><h3>HERO JUGADORES 1.er EQUIPO (Imagen)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/NEB_2.jpg?v=1795020809" data-grande="assets/NEB_2_g.jpg?v=1795020809" class="ampliable" alt="HERO JUGADORES 1.er EQUIPO (Imagen) · Nebraska · North Platte" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Want your player to train the Juventus way, right here in Nebraska? ⚽🇮🇹<br><br>Juventus Academy coaches from Italy are coming to North Platte:<br>✅ Two mornings of training with the official Juventus methodology<br>✅ A complete evaluation for every player<br>✅ Boys and girls, field players and goalkeepers<br><br>📅 February 20–21 · 9 AM – 1 PM<br>📍 North Platte Recreation Center, North Platte, NE<br><br>Camp led by Juventus Academy coaches. Tap Sign Up to register 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Train the Juventus way · North Platte, Feb 20–21</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="NEB_3">
+  <header><span class="num">3</span><h3>STATIC COACHES (Imagen)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/NEB_3.jpg?v=1795020808" data-grande="assets/NEB_3_g.jpg?v=1795020808" class="ampliable" alt="STATIC COACHES (Imagen) · Nebraska · North Platte" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Juventus Academy coaches are flying in from Italy to train your player, without leaving Nebraska. 🇮🇹⚽<br><br>For two days, every session follows the Juventus methodology, and every player gets individual attention from the coaches.<br><br>📅 February 20–21 · 9 AM – 1 PM<br>📍 North Platte Recreation Center, North Platte, NE<br>⚽ Boys and girls<br><br>Tap Sign Up to register your player 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Coaches from Italy · Nebraska, Feb 20–21</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad-video">
+  <header><span class="num">4</span><h3>VIDEO JESÚS (Video)</h3><span class="estado pendv">Pendiente</span></header>
+  <div class="cuerpo"><div class="media"><div class="ph"><b>Video de Jesús</b><span>Nebraska · North Platte</span></div></div>
+  <div class="copy"><p>El video de Jesús para Nebraska se agrega apenas lo envíe. Texto previsto (se ajusta a lo que diga en el video):</p>
+  <p class="tp" style="margin-top:8px">Nebraska, this is your moment! ⚽<br><br>The Juventus ID Camp arrives in North Platte on February 20–21. Show your talent to the Juventus Academy coaches and receive a complete evaluation.<br><br>📅 February 20–21 · 9 AM – 1 PM<br>📍 North Platte Recreation Center, North Platte, NE<br>⚽ Boys and girls<br><br>Fino alla fine, forza Juventus! Sign up through the link 👇</p></div></div>
+</article><article class="ad" data-id="NEB_5">
+  <header><span class="num">5</span><h3>VIDEO ¿QUÉ NOS HACE DIFERENTES? (Video)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><video controls playsinline preload="none" poster="assets/NEB_5_poster.jpg?v=1795020822" style="width:100%;max-width:300px;border-radius:8px;display:block"><source src="assets/NEB_5_video.mp4?v=1795020822" type="video/mp4"></video></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">What makes the Juventus ID Camp different? 🤍🖤<br><br>Every player receives a complete evaluation from the Juventus Academy coaches. We have the history, the experience and the results, and on February 20–21 we bring them to North Platte.<br><br>📅 February 20–21 · 9 AM – 1 PM<br>📍 North Platte Recreation Center, North Platte, NE<br>⚽ Boys and girls<br><br>Tap Sign Up to register your player 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">What makes us different? · Feb 20–21</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="NEB_6">
+  <header><span class="num">6</span><h3>STATIC UN DÍA EN EL ID CAMP (Imagen)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/NEB_6.jpg?v=1795020808" data-grande="assets/NEB_6_g.jpg?v=1795020808" class="ampliable" alt="STATIC UN DÍA EN EL ID CAMP (Imagen) · Nebraska · North Platte" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">This is a day at the Juventus ID Camp ⚽<br><br>Warm-up with Juventus Academy coaches from Italy, technique, games and closing. Every session follows the Juventus methodology, in small groups by age, and every player gets individual attention from the coaches.<br><br>📅 February 20–21 · 9 AM – 1 PM<br>📍 North Platte Recreation Center, North Platte, NE<br>⚽ Boys and girls<br><br>No tryout needed. Tap Sign Up to register your player 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">A day at the ID Camp · Feb 20–21</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><h3 class="sub">Variante opcional para el fin de semana de Black Friday (27–30 nov)</h3><p class="como">Solo si se decide llevar el código a los anuncios. Usa la pieza Hero con este texto, del 27 al 30, y luego se apaga.</p><article class="ad" data-id="BF_NEB">
+  <header><span class="num">BF</span><h3>HERO + TEXTO BLACK FRIDAY (opcional)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/NEB_bf.jpg?v=1795020808" data-grande="assets/NEB_bf_g.jpg?v=1795020808" class="ampliable" alt="Hero · Nebraska · North Platte"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Black Friday at the Juventus ID Camp Nebraska ⚪⚫<br><br>Save your player&#x27;s spot now with $50 off using code JUVEBF, only until Monday, November 30.<br><br>📅 February 20–21 · 9 AM – 1 PM<br>📍 North Platte Recreation Center, North Platte, NE<br>⚽ Boys and girls<br><br>Tap Sign Up and enter the code at checkout 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Black Friday: $50 off · Juventus ID Camp Nebraska</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article>
+</section><section id="cba" class="sede">
+  <div class="ficha"><h2>Córdoba · México</h2><p>26–28 de marzo de 2027 · 9:00 AM – 3:00 PM · L&#x27;Encant, Fortín de las Flores, Ver. · MX$4.675 · 6 a 17 años</p><p class="plan">En español, con el logo de Juventus Training Camps México. Los anuncios llevan a la página de inscripción de Córdoba (/id-elite-training/136/Cordoba).</p></div>
+  <div class="confirmar"><b>Por confirmar con Jesús:</b> el 26–28 de marzo de 2027 cae de Viernes Santo a Domingo de Pascua; muchas familias viajan esos días. Conviene confirmarlo antes de subir la inversión en enero.</div>
+  <div class="segm"><b class="segm-t">Cómo se configura en Meta</b>
+    <dl>
+      <dt>Ubicación</dt><dd>Radio de <b>25–30 km</b> alrededor de L&#x27;Encant (Fortín de las Flores) (<a href="https://www.google.com/maps?q=18.9018,-97.0006" target="_blank" rel="noopener">ver el punto en el mapa</a>). Cubre Córdoba, Fortín, Orizaba, Ixtaczoquitlán, Amatlán, Río Blanco, Nogales y Mendoza (la zona metropolitana Córdoba–Orizaba).</dd>
+      <dt>A quién</dt><dd>Personas que viven en esa zona o que estuvieron allí hace poco. Padres de <b>30 a 55 años</b> como público sugerido (Meta puede ampliarlo si encuentra familias interesadas).</dd>
+      <dt>Dónde se ve</dt><dd>Solo Facebook e Instagram: feed, historias y reels (sin Audience Network).</dd>
+      <dt>Objetivo</dt><dd>Registros en la página de inscripción de la sede, medidos con el píxel.</dd>
+      <dt>Cuenta</dt><dd>Juventus Camps MX, como un conjunto nuevo (CBA | FORTIN 25KM | 30-55 | END 26MAR).</dd>
+      <dt>Fechas</dt><dd>Desde el 25 de noviembre (para llegar al Black Friday con alcance) hasta el 26 de marzo, día en que empieza el camp. Estaba previsto arrancar el 24 de enero.</dd>
+    </dl>
+  </div>
+  <h3 class="sub">Tamaño del público</h3><div class="tw"><table class="t"><thead><tr><th>Radio desde la sede</th><th class="n">Población</th><th class="n">Niños 5–17</th><th class="n">Adultos 30–54</th></tr></thead><tbody><tr><td>15 km</td><td class="n">641.563</td><td class="n">138.359</td><td class="n">219.622</td></tr><tr><td>25 km</td><td class="n">1.019.155</td><td class="n">232.840</td><td class="n">333.656</td></tr><tr><td>40 km</td><td class="n">1.453.501</td><td class="n">345.900</td><td class="n">464.003</td></tr><tr><td>50 km</td><td class="n">1.755.797</td><td class="n">426.950</td><td class="n">551.288</td></tr></tbody></table></div><p class="pie">Fuente: INEGI, Censo 2020 (por localidad). Meta no da una estimación de alcance por esta vía: el número exacto se ve en Ads Manager al armar el conjunto.</p>
+  <h3 class="sub">Presupuesto propuesto por fases</h3><div class="tw"><table class="t"><thead><tr><th>Fase</th><th class="n">Al día</th><th class="n">Gasto</th><th>Por qué</th></tr></thead><tbody><tr><td><b>Empuje Black Friday</b><br><small>25/11 – 30/11 · 6 días</small></td><td class="n"><b>USD 12</b></td><td class="n">USD 72</td><td><small>Cupón JUVEBFMX MX$900 (27–30 nov). En México el CPM es bajo (Monterrey ≈ USD 1,3), así que USD 12 ya da alcance.</small></td></tr><tr><td><b>Diciembre–enero bajo</b><br><small>01/12 – 23/01 · 54 días</small></td><td class="n"><b>USD 5</b></td><td class="n">USD 270</td><td><small>Presencia mínima 2–4 meses antes del evento (fiestas y cuesta de enero). Junta público para retargeting.</small></td></tr><tr><td><b>Normal</b><br><small>24/01 – 11/03 · 47 días</small></td><td class="n"><b>USD 18</b></td><td class="n">USD 846</td><td><small>Inicio previsto (61 días antes). Entre Puebla (20) y Monterrey (24), con mercado más chico.</small></td></tr><tr><td><b>Últimas 2 semanas</b><br><small>12/03 – 26/03 · 15 días</small></td><td class="n"><b>USD 22</b></td><td class="n">USD 330</td><td><small>Subida de ~22 % (18 → 22). Termina el día del evento.</small></td></tr><tr class="tot"><td>Total</td><td></td><td class="n">USD 1.518</td><td><small>Unos USD 342 se gastan antes del 24 de enero, fecha en que estaba previsto arrancar.</small></td></tr></tbody></table></div>
+  <h3 class="sub">Lo que se puede esperar</h3><div class="tw"><table class="t"><thead><tr><th>Escenario</th><th class="n">Familias registradas</th><th class="n">Pagan</th><th class="n">Niños pagados</th><th class="n">Costo por niño</th><th class="n">Ingreso (precio de lista)</th><th class="n">Retorno</th></tr></thead><tbody><tr><td>Bajo</td><td class="n">≈ 143</td><td class="n">14 %</td><td class="n"><b>≈ 22</b></td><td class="n">≈ USD 70</td><td class="n">MX$100.904 (≈ USD 5.471)</td><td class="n">3,6x</td></tr><tr><td>Medio</td><td class="n">≈ 181</td><td class="n">20 %</td><td class="n"><b>≈ 39</b></td><td class="n">≈ USD 39</td><td class="n">MX$182.425 (≈ USD 9.892)</td><td class="n">6,5x</td></tr><tr><td>Alto</td><td class="n">≈ 218</td><td class="n">28 %</td><td class="n"><b>≈ 66</b></td><td class="n">≈ USD 23</td><td class="n">MX$308.717 (≈ USD 16.739)</td><td class="n">11,0x</td></tr></tbody></table></div>
+  <p class="pie">Cómo se calcula: costo base por niño de USD 70 / 40 / 24; 14 % / 20 % / 28 % (Monterrey 14 %, Puebla 29 %). Son referencias para decidir, no metas.</p>
+  <h3 class="sub">Los 6 anuncios</h3>
+  <article class="ad" data-id="CBA_1">
+  <header><span class="num">1</span><h3>HERO-POSTER (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/CBA_1.jpg?v=1795020809" data-grande="assets/CBA_1_g.jpg?v=1795020809" class="ampliable" alt="HERO-POSTER (Imagen) · Córdoba · México" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">ATENCIÓN CÓRDOBA 👉 Por primera vez, el Juventus ID Camp llega a la zona de Córdoba y Orizaba, el 26, 27 y 28 de marzo.<br><br>Son tres días entrenando con coaches de Juventus Academy que vienen desde Italia, con la misma metodología con la que Juventus forma a los jugadores de su academia: trabajo físico, técnico y táctico, adaptado a cada edad.<br><br>📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM<br>📍 L&#x27;Encant, Fortín de las Flores, Ver.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Juventus ID Camp · Córdoba, 26–28 mar</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="CBA_2">
+  <header><span class="num">2</span><h3>HERO JUGADORES 1.er EQUIPO (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/CBA_2.jpg?v=1795020810" data-grande="assets/CBA_2_g.jpg?v=1795020810" class="ampliable" alt="HERO JUGADORES 1.er EQUIPO (Imagen) · Córdoba · México" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">¿Quieres que tu hijo o hija entrene al estilo Juventus sin salir de Veracruz? ⚽🇮🇹<br><br>Los coaches de Juventus Academy llegan desde Italia a Fortín de las Flores:<br>✅ Tres días de entrenamiento con la metodología oficial de Juventus<br>✅ Una evaluación completa para cada jugador<br>✅ Niños y niñas de 6 a 17 años, jugadores y porteros<br><br>📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM<br>📍 L&#x27;Encant, Fortín de las Flores, Ver.<br><br>Camp a cargo de coaches de Juventus Academy. Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Entrena al estilo Juventus · Córdoba, 26–28 mar</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="CBA_3">
+  <header><span class="num">3</span><h3>STATIC COACHES (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/CBA_3.jpg?v=1795020809" data-grande="assets/CBA_3_g.jpg?v=1795020809" class="ampliable" alt="STATIC COACHES (Imagen) · Córdoba · México" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Los coaches de Juventus Academy viajan desde Italia para entrenar a tu hijo o hija, sin salir de Córdoba. 🇮🇹⚽<br><br>Durante tres días, cada sesión sigue la metodología Juventus y cada jugador recibe atención individual de los coaches.<br><br>📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM<br>📍 L&#x27;Encant, Fortín de las Flores, Ver.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Coaches desde Italia · Córdoba, 26–28 mar</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad-video">
+  <header><span class="num">4</span><h3>VIDEO JESÚS (Video)</h3><span class="estado pendv">Pendiente</span></header>
+  <div class="cuerpo"><div class="media"><div class="ph"><b>Video de Jesús</b><span>Córdoba · México</span></div></div>
+  <div class="copy"><p>El video de Jesús para Córdoba se agrega apenas lo envíe. Texto previsto (se ajusta a lo que diga en el video):</p>
+  <p class="tp" style="margin-top:8px">Córdoba, Juventus Academy llega a Veracruz 🤍🖤<br><br>El 26, 27 y 28 de marzo, tu hijo o hija puede entrenar con la metodología de uno de los clubes más importantes del mundo y de la historia, con coaches de Juventus Academy desde Italia.<br><br>📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM<br>📍 L&#x27;Encant, Fortín de las Flores, Ver.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇<br>Fino alla fine, forza Juve! ⚪⚫</p></div></div>
+</article><article class="ad" data-id="CBA_5">
+  <header><span class="num">5</span><h3>VIDEO ¿QUÉ NOS HACE DIFERENTES? (Video)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><video controls playsinline preload="none" poster="assets/CBA_5_poster.jpg?v=1795020825" style="width:100%;max-width:300px;border-radius:8px;display:block"><source src="assets/CBA_5_video.mp4?v=1795020825" type="video/mp4"></video></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">¿Qué hace diferente al Juventus ID Elite Training? 🤍🖤<br><br>Cada jugador recibe una evaluación completa de los coaches de Juventus Academy. Tenemos la historia, la experiencia y los resultados, y el 26, 27 y 28 de marzo los traemos a Córdoba.<br><br>📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM<br>📍 L&#x27;Encant, Fortín de las Flores, Ver.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">¿Qué nos hace diferentes? · 26–28 mar</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="CBA_6">
+  <header><span class="num">6</span><h3>STATIC UN DÍA EN EL ID CAMP (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/CBA_6.jpg?v=1795020810" data-grande="assets/CBA_6_g.jpg?v=1795020810" class="ampliable" alt="STATIC UN DÍA EN EL ID CAMP (Imagen) · Córdoba · México" title="Clic para verla en grande"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Así es un día en el Juventus ID Camp ⚽<br><br>Calentamiento con coaches de Juventus Academy que vienen desde Italia, trabajo técnico, juego y cierre. Cada sesión sigue la metodología Juventus, en grupos pequeños por edad, y cada jugador recibe atención individual de los coaches.<br><br>📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM<br>📍 L&#x27;Encant, Fortín de las Flores, Ver.<br>⚽ Niños y niñas de 6 a 17 años<br><br>No hace falta prueba previa. Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Un día en el ID Camp · 26–28 mar</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><h3 class="sub">Variante opcional para el fin de semana de Black Friday (27–30 nov)</h3><p class="como">Solo si se decide llevar el código a los anuncios. Usa la pieza Hero con este texto, del 27 al 30, y luego se apaga.</p><article class="ad" data-id="BF_CBA">
+  <header><span class="num">BF</span><h3>HERO + TEXTO BLACK FRIDAY (opcional)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/CBA_bf.jpg?v=1795020809" data-grande="assets/CBA_bf_g.jpg?v=1795020809" class="ampliable" alt="Hero · Córdoba · México"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Black Friday en el Juventus ID Camp Córdoba ⚪⚫<br><br>Aparta el lugar de tu hijo o hija con $900 de descuento usando el código JUVEBFMX, solo del 27 al 30 de noviembre.<br><br>📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM<br>📍 L&#x27;Encant, Fortín de las Flores, Ver.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte y escribe el código al pagar 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Black Friday: $900 de descuento · Córdoba</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article>
+</section><div id="visor" hidden role="dialog" aria-label="Imagen en grande"><button class="cerrar" type="button" aria-label="Cerrar">×</button><img alt=""></div><footer>Juventus ID Camps · Revisión de Nebraska y Córdoba · 18-11-2026 · Página interna, no indexada.</footer>
+</div>
+<script>
+const CFG={"accion": "https://docs.google.com/forms/d/e/1FAIpQLSeGUY8Cv9Ea08X9HkdznY9pzVoUc4Gj-GdymsVTFP86wbE5sw/formResponse", "entry": {"pieza": 333677581, "cuenta": 724853821, "autor": 299801437, "comentario": 1175231019, "copy_corregido": 1649408514, "copy_original": 1637675582, "enviado": 909195940, "tipo": 1605073129, "zona": 1831673234, "fila": 1327618412}, "cuenta": "idcamps_nebcba"};
+const ORIG={"NEB_1": {"texto": "For the first time, the Juventus ID Camp is coming to Nebraska! ⚪⚫\n\nTwo mornings of training with Juventus Academy coaches from Italy, with the same methodology Juventus uses to develop the players of its academy.\n\n📅 February 20–21 · 9 AM – 1 PM\n📍 North Platte Recreation Center, North Platte, NE\n⚽ Boys and girls\n\nTap Sign Up to register your player 👇", "titulo": "Juventus ID Camp · Nebraska, Feb 20–21", "nombre": "HERO-POSTER (Imagen)"}, "NEB_2": {"texto": "Want your player to train the Juventus way, right here in Nebraska? ⚽🇮🇹\n\nJuventus Academy coaches from Italy are coming to North Platte:\n✅ Two mornings of training with the official Juventus methodology\n✅ A complete evaluation for every player\n✅ Boys and girls, field players and goalkeepers\n\n📅 February 20–21 · 9 AM – 1 PM\n📍 North Platte Recreation Center, North Platte, NE\n\nCamp led by Juventus Academy coaches. Tap Sign Up to register 👇", "titulo": "Train the Juventus way · North Platte, Feb 20–21", "nombre": "HERO JUGADORES 1.er EQUIPO (Imagen)"}, "NEB_3": {"texto": "Juventus Academy coaches are flying in from Italy to train your player, without leaving Nebraska. 🇮🇹⚽\n\nFor two days, every session follows the Juventus methodology, and every player gets individual attention from the coaches.\n\n📅 February 20–21 · 9 AM – 1 PM\n📍 North Platte Recreation Center, North Platte, NE\n⚽ Boys and girls\n\nTap Sign Up to register your player 👇", "titulo": "Coaches from Italy · Nebraska, Feb 20–21", "nombre": "STATIC COACHES (Imagen)"}, "NEB_5": {"texto": "What makes the Juventus ID Camp different? 🤍🖤\n\nEvery player receives a complete evaluation from the Juventus Academy coaches. We have the history, the experience and the results, and on February 20–21 we bring them to North Platte.\n\n📅 February 20–21 · 9 AM – 1 PM\n📍 North Platte Recreation Center, North Platte, NE\n⚽ Boys and girls\n\nTap Sign Up to register your player 👇", "titulo": "What makes us different? · Feb 20–21", "nombre": "VIDEO ¿QUÉ NOS HACE DIFERENTES? (Video)"}, "NEB_6": {"texto": "This is a day at the Juventus ID Camp ⚽\n\nWarm-up with Juventus Academy coaches from Italy, technique, games and closing. Every session follows the Juventus methodology, in small groups by age, and every player gets individual attention from the coaches.\n\n📅 February 20–21 · 9 AM – 1 PM\n📍 North Platte Recreation Center, North Platte, NE\n⚽ Boys and girls\n\nNo tryout needed. Tap Sign Up to register your player 👇", "titulo": "A day at the ID Camp · Feb 20–21", "nombre": "STATIC UN DÍA EN EL ID CAMP (Imagen)"}, "BF_NEB": {"texto": "Black Friday at the Juventus ID Camp Nebraska ⚪⚫\n\nSave your player's spot now with $50 off using code JUVEBF, only until Monday, November 30.\n\n📅 February 20–21 · 9 AM – 1 PM\n📍 North Platte Recreation Center, North Platte, NE\n⚽ Boys and girls\n\nTap Sign Up and enter the code at checkout 👇", "titulo": "Black Friday: $50 off · Juventus ID Camp Nebraska", "nombre": "HERO + TEXTO BLACK FRIDAY (opcional)"}, "CBA_1": {"texto": "ATENCIÓN CÓRDOBA 👉 Por primera vez, el Juventus ID Camp llega a la zona de Córdoba y Orizaba, el 26, 27 y 28 de marzo.\n\nSon tres días entrenando con coaches de Juventus Academy que vienen desde Italia, con la misma metodología con la que Juventus forma a los jugadores de su academia: trabajo físico, técnico y táctico, adaptado a cada edad.\n\n📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM\n📍 L'Encant, Fortín de las Flores, Ver.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Juventus ID Camp · Córdoba, 26–28 mar", "nombre": "HERO-POSTER (Imagen)"}, "CBA_2": {"texto": "¿Quieres que tu hijo o hija entrene al estilo Juventus sin salir de Veracruz? ⚽🇮🇹\n\nLos coaches de Juventus Academy llegan desde Italia a Fortín de las Flores:\n✅ Tres días de entrenamiento con la metodología oficial de Juventus\n✅ Una evaluación completa para cada jugador\n✅ Niños y niñas de 6 a 17 años, jugadores y porteros\n\n📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM\n📍 L'Encant, Fortín de las Flores, Ver.\n\nCamp a cargo de coaches de Juventus Academy. Toca Registrarte e inscríbelo en línea 👇", "titulo": "Entrena al estilo Juventus · Córdoba, 26–28 mar", "nombre": "HERO JUGADORES 1.er EQUIPO (Imagen)"}, "CBA_3": {"texto": "Los coaches de Juventus Academy viajan desde Italia para entrenar a tu hijo o hija, sin salir de Córdoba. 🇮🇹⚽\n\nDurante tres días, cada sesión sigue la metodología Juventus y cada jugador recibe atención individual de los coaches.\n\n📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM\n📍 L'Encant, Fortín de las Flores, Ver.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Coaches desde Italia · Córdoba, 26–28 mar", "nombre": "STATIC COACHES (Imagen)"}, "CBA_5": {"texto": "¿Qué hace diferente al Juventus ID Elite Training? 🤍🖤\n\nCada jugador recibe una evaluación completa de los coaches de Juventus Academy. Tenemos la historia, la experiencia y los resultados, y el 26, 27 y 28 de marzo los traemos a Córdoba.\n\n📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM\n📍 L'Encant, Fortín de las Flores, Ver.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "¿Qué nos hace diferentes? · 26–28 mar", "nombre": "VIDEO ¿QUÉ NOS HACE DIFERENTES? (Video)"}, "CBA_6": {"texto": "Así es un día en el Juventus ID Camp ⚽\n\nCalentamiento con coaches de Juventus Academy que vienen desde Italia, trabajo técnico, juego y cierre. Cada sesión sigue la metodología Juventus, en grupos pequeños por edad, y cada jugador recibe atención individual de los coaches.\n\n📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM\n📍 L'Encant, Fortín de las Flores, Ver.\n⚽ Niños y niñas de 6 a 17 años\n\nNo hace falta prueba previa. Toca Registrarte e inscríbelo en línea 👇", "titulo": "Un día en el ID Camp · 26–28 mar", "nombre": "STATIC UN DÍA EN EL ID CAMP (Imagen)"}, "BF_CBA": {"texto": "Black Friday en el Juventus ID Camp Córdoba ⚪⚫\n\nAparta el lugar de tu hijo o hija con $900 de descuento usando el código JUVEBFMX, solo del 27 al 30 de noviembre.\n\n📅 26, 27 y 28 de marzo · 9:00 AM – 3:00 PM\n📍 L'Encant, Fortín de las Flores, Ver.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte y escribe el código al pagar 👇", "titulo": "Black Friday: $900 de descuento · Córdoba", "nombre": "HERO + TEXTO BLACK FRIDAY (opcional)"}};
+
+const LSK='idc_nebcba_v1';
+const LS={get(){try{return JSON.parse(localStorage.getItem(LSK)||'{}')}catch(e){return {}}},set(v){try{localStorage.setItem(LSK,JSON.stringify(v))}catch(e){}}};
+const norm=t=>(t||'').replace(/\u00a0/g,' ').split('\n').map(l=>l.trim()).join('\n').replace(/\n{3,}/g,'\n\n').trim();
+function leer(ad){return {texto:norm(ad.querySelector('[data-campo="texto"]').innerText),titulo:norm(ad.querySelector('[data-campo="titulo"]').innerText)}}
+function cambiado(ad){const o=ORIG[ad.dataset.id],v=leer(ad);return v.texto!==norm(o.texto)||v.titulo!==norm(o.titulo)}
+function pintar(ad){const c=cambiado(ad),b=ad.querySelector('.aprobar');b.textContent=c?'Aprobar con texto corregido':'Aprobar';b.classList.toggle('copy',c);
+  ad.querySelector('.deshacer').hidden=!c;ad.querySelectorAll('.ed').forEach(e=>e.classList.toggle('cambiado',norm(e.innerText)!==norm(ORIG[ad.dataset.id][e.dataset.campo])))}
+async function enviar(reg){const f=new URLSearchParams();for(const k in CFG.entry)f.append('entry.'+CFG.entry[k],reg[k]??'');
+  try{await fetch(CFG.accion,{method:'POST',mode:'no-cors',body:f});return true}catch(e){return false}}
+function marcar(ad,txt){ad.classList.add('aprobado');ad.querySelector('[data-estado]').textContent=txt}
+async function aprobar(ad){const id=ad.dataset.id,c=cambiado(ad),v=leer(ad),o=ORIG[id];
+  const reg={pieza:id,cuenta:CFG.cuenta,autor:'Alessandro',tipo:c?'aprobado_copy':'aprobado',comentario:'',copy_original:JSON.stringify({texto:o.texto,titulo:o.titulo}),
+    copy_corregido:c?JSON.stringify(v):'',enviado:new Date().toISOString(),zona:'',fila:''};
+  const av=ad.querySelector('[data-aviso]');av.textContent='Guardando…';
+  if(!await enviar(reg)){av.textContent='No se pudo guardar. Revise la conexión e intente de nuevo.';return}
+  const st=LS.get();st[id]={tipo:reg.tipo,v:c?v:null,hora:reg.enviado};LS.set(st);
+  marcar(ad,c?'Aprobado con texto corregido':'Aprobado');av.textContent='Guardado.';contar()}
+async function nota(ad){const ta=ad.querySelector('.nota textarea'),t=ta.value.trim();if(!t)return;const av=ad.querySelector('[data-aviso]');av.textContent='Enviando…';
+  const ok=await enviar({pieza:ad.dataset.id,cuenta:CFG.cuenta,autor:'Alessandro',tipo:'comentario',comentario:t,copy_original:'',copy_corregido:cambiado(ad)?JSON.stringify(leer(ad)):'',enviado:new Date().toISOString(),zona:'',fila:''});
+  av.textContent=ok?'Nota enviada.':'No se pudo enviar la nota.';if(ok){ta.value='';ad.querySelector('.nota').hidden=true}}
+function contar(){document.querySelectorAll('.sede').forEach(s=>{const n=s.querySelectorAll('.ad').length,ap=s.querySelectorAll('.ad.aprobado').length;
+  const c=s.querySelector('.todo .cuenta');if(c)c.textContent=ap+' de '+n+' anuncios aprobados';const b=s.querySelector('.todo button');if(b)b.hidden=ap===n})}
+document.querySelectorAll('.ad').forEach(ad=>{ad.querySelectorAll('.ed').forEach(e=>e.addEventListener('input',()=>pintar(ad)));
+  ad.addEventListener('click',ev=>{const a=ev.target.closest('[data-accion]');if(!a)return;const k=a.dataset.accion;
+    if(k==='aprobar')aprobar(ad);
+    else if(k==='nota'){const n=ad.querySelector('.nota');n.hidden=!n.hidden;if(!n.hidden)n.querySelector('textarea').focus()}
+    else if(k==='enviar-nota')nota(ad);
+    else if(k==='restaurar'){const o=ORIG[ad.dataset.id];ad.querySelector('[data-campo="texto"]').innerText=o.texto;ad.querySelector('[data-campo="titulo"]').innerText=o.titulo;pintar(ad)}})});
+document.querySelectorAll('.sede').forEach(s=>{const d=document.createElement('div');d.className='todo';d.innerHTML='<span class="cuenta"></span><button type="button">Aprobar todos los que faltan de esta sede</button>';
+  s.querySelector('.presu').after(d);d.querySelector('button').addEventListener('click',async()=>{for(const ad of s.querySelectorAll('.ad:not(.aprobado)'))await aprobar(ad)})});
+function aplicar(st){for(const id in st){const ad=document.querySelector('.ad[data-id="'+id+'"]');if(!ad)continue;const x=st[id];
+  if(x.v){ad.querySelector('[data-campo="texto"]').innerText=x.v.texto;ad.querySelector('[data-campo="titulo"]').innerText=x.v.titulo;pintar(ad)}
+  if(x.tipo&&x.tipo.indexOf('aprobado')===0)marcar(ad,x.tipo==='aprobado_copy'?'Aprobado con texto corregido':'Aprobado')}contar()}
+aplicar(LS.get());
+fetch('estado.json?t='+Date.now()).then(r=>r.ok?r.json():{}).then(j=>{if(j&&typeof j==='object')aplicar(j)}).catch(()=>{});
+(function(){function ver(s){document.querySelectorAll('.sede').forEach(e=>{e.hidden=e.id!==s});document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===s))}
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{ver(b.dataset.s);try{history.replaceState(null,'','#'+b.dataset.s)}catch(e){}window.scrollTo(0,0)}));
+if((location.hash||'').slice(1)==='cba')ver('cba')})();
+
+(function(){var v=document.getElementById('visor'),im=v.querySelector('img');
+document.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('img.ampliable');if(!t)return;im.src=t.dataset.grande||t.src;im.alt=t.alt;v.hidden=false;document.body.style.overflow='hidden';});
+function cerrar(){v.hidden=true;im.removeAttribute('src');document.body.style.overflow='';}
+v.addEventListener('click',cerrar);document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!v.hidden)cerrar();});})();
+</script></body></html>
